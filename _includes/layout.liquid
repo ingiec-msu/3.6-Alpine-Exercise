@@ -19,13 +19,13 @@ title: 11ty Boilerplate
 </head>
 <body>
 
+<!-- Listed 10 names in a list and created a random generator to randomly pull a name from the list. -->
   <script>
     let name = ['Zeus', 'Hera', 'Poseidon', 'Athena', 'Apollo', 'Artemis', 'Aphrodite', 'Hermes', 'Ares', 'Hades'];
     randomItem = name[Math.floor(Math.random() * name.length)];
-    
   </script>
 
-  <!-- Button Code -->
+<!-- Button Code -->
   <div x-data="{ open: false }">
     <button class="styled-button" @click="open = true">Random Greek Name</button>
 

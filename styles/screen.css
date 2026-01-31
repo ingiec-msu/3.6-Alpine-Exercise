@@ -1,3 +1,4 @@
+/*Aligns the button and text to the center while also stylizing the background color and text font. */
 body {
     font-family: Helvetica, sans-serif;
     background: #cce2f5;
@@ -7,11 +8,13 @@ body {
     align-items: center; height: 100vh;
 }
 
+/*Changed color of Value/Result text.*/
 h1 {
     color: rgb(73, 14, 92);
     letter-spacing: -2px;
 }
 
+/*Where most of the stylization of the button takes place.*/
 .styled-button {
     font-family: Georgia;
     font-size: 50px;
@@ -27,6 +30,7 @@ h1 {
     cursor: pointer;
 }
 
+/*Creates the dotted-line border effect on the button.*/
 .styled-button:hover {
     border:2px dashed #9e6e88;
 }
