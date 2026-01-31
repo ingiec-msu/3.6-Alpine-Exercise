@@ -9,15 +9,26 @@ title: 11ty Boilerplate
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <!-- <link rel="stylesheet" href="/styles/screen.css"> -->
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+
+
+  
+
 </head>
 <body>
   <nav>
     <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
+      {{ content }}
     </ul>
   </nav>
-    {{ content }}
-    <button type="button">Click Me!</button>
+    
+  <!-- Button Code -->
+  <div x-data="{name: ['Zeus', 'Hera', 'Poseidon', 'Athena', 'Apollo', 'Artemis', 'Aphrodite', 'Hermes', 'Ares', 'Hades']}">
+    <button @click="alert = (name[2])">Random Greek Name</button>
+  <p x-show="open">Hello Alpine!</p>
+  </div>
+
 </body>
 </html>
