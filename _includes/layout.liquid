@@ -18,16 +18,12 @@ title: 11ty Boilerplate
 
 </head>
 <body>
-  <nav>
-    <ul>
-      {{ content }}
-    </ul>
-  </nav>
-    
+
   <!-- Button Code -->
   <div x-data="{name: ['Zeus', 'Hera', 'Poseidon', 'Athena', 'Apollo', 'Artemis', 'Aphrodite', 'Hermes', 'Ares', 'Hades']}">
-    <button @click="alert = (name[2])">Random Greek Name</button>
-  <p x-show="open">Hello Alpine!</p>
+    <button @click="alert(name[2])">Random Greek Name</button>
+    
+    <p x-show="open">Hello Alpine!</p>
   </div>
 
 </body>
