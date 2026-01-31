@@ -19,10 +19,15 @@ title: 11ty Boilerplate
 </head>
 <body>
 
-  <!-- Button Code -->
-  <div x-data="{name: ['Zeus', 'Hera', 'Poseidon', 'Athena', 'Apollo', 'Artemis', 'Aphrodite', 'Hermes', 'Ares', 'Hades']}">
-    <button @click="alert(name[2])">Random Greek Name</button>
+  <script>
+    let name = ['Zeus', 'Hera', 'Poseidon', 'Athena', 'Apollo', 'Artemis', 'Aphrodite', 'Hermes', 'Ares', 'Hades'];
+    randomItem = name[Math.floor(Math.random() * name.length)];
     
+  </script>
+
+  <!-- Button Code -->
+  <div x-data="{name}">
+    <button @click="alert(randomItem)">Random Greek Name</button>
     <p x-show="open">Hello Alpine!</p>
   </div>
 
